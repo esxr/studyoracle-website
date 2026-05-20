@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "generate-units": "tsx scripts/generate-units.ts",
-    "prebuild": "npm run generate-units",
+    "prebuild": "test -f ../study-material-database/course_list.json && npm run generate-units || true",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
