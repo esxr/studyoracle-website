@@ -73,7 +73,7 @@ export async function POST(request: NextRequest) {
       const resend = new Resend(process.env.RESEND_API_KEY);
 
       await resend.emails.send({
-        from: "StudyOracle Website <noreply@studyoracle.com>",
+        from: process.env.RESEND_FROM_EMAIL || "StudyOracle <onboarding@resend.dev>",
         to: CONTACT_EMAIL,
         replyTo: email,
         subject: `New enquiry from ${name} at ${organisation}`,

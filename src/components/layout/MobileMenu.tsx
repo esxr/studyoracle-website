@@ -44,7 +44,7 @@ export default function MobileMenu({ open, onClose }: MobileMenuProps) {
       {/* Slide-out panel */}
       <div
         className={`fixed inset-y-0 right-0 z-50 w-72 bg-white shadow-xl transition-transform duration-300 md:hidden ${
-          open ? "translate-x-0" : "translate-x-full"
+          open ? "translate-x-0 pointer-events-auto" : "translate-x-full pointer-events-none"
         }`}
         role="dialog"
         aria-modal="true"

@@ -44,7 +44,7 @@ export default function Header() {
             <li key={item.href}>
               <Link
                 href={item.href}
-                className={`text-sm font-medium transition-colors hover:text-deep-blue ${
+                className={`inline-block rounded-md px-3 py-2 text-sm font-medium transition-colors hover:text-deep-blue ${
                   pathname === item.href
                     ? "text-deep-blue underline underline-offset-4"
                     : "text-slate-600"
